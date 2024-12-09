@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RoomController!{% endblock %}
+
+{% block body %}
+    <a href="{{ path('create_room') }}">Créer un room</a>
+
+    <h3>Voilà tes rooms :</h3>
+    {% for room in rooms %}
+
+        {{ room.name }}
+        {{ room.capacity }}
+
+        {% for image in room.images %}
+            <img src="{{ asset(image.path) }}" width="60" alt="">
+        {% endfor %}
+
+    {% endfor %}
+{% endblock %}
+
+

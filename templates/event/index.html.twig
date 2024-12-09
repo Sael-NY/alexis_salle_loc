@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+    <a href="{{ path('create_event') }}">Créer un event (chad encore)</a>
+
+    <h3>Voilà tes events :</h3>
+    {% for event in events %}
+        {{ event.title }}
+
+    {% endfor %}
+
+
+{% endblock %}
+

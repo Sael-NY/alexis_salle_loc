@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+    <div>
+        {{ form_start(form) }}
+        {{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
+        <button class="btn bg-success text-white mt-2">Envoyer</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

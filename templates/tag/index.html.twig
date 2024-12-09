@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TagController!{% endblock %}
+
+{% block body %}
+    <a href="{{ path('create_tag') }}">Créer un tag</a>
+
+    <h3>Voilà tes tags :</h3>
+    {% for tag in tags %}
+
+        {{ tag.name }}
+
+    {% endfor %}
+{% endblock %}
+

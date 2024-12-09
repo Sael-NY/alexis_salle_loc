@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AnimatorController!{% endblock %}
+
+{% block body %}
+    <a href="{{ path('animator_create') }}">Créer une tâches</a>
+        <h3>Voilà tes animateurs :</h3>
+    {% for animator in animators %}
+        <ul>
+            <li>
+                {{ animator.firstname }}
+            </li>
+            <li>
+                {{ animator.lastname }}
+            </li>
+            <li>
+                {{ animator.email }}
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock %}

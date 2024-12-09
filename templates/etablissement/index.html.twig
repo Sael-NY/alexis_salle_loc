@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!{% endblock %}
+
+{% block body %}
+    <a href="{{ path('create_etablissement') }}">Créer une etablissement (chad)</a>
+    <h3>Voilà tes établissements :</h3>
+    {% for etablissement in etablissements %}
+        {{ etablissement.name }}
+
+    {% endfor %}
+{% endblock %}
